@@ -42,7 +42,7 @@ Our initial release contains the data generation procedure, dataset, and trainin
 
 ## Data Release
 
-[`alpaca_data.json`](./alpaca_data.json) contains 52K instruction-following data we used for fine-tuning the Alpaca model.
+[`alpaca_data.json`](alpaca_data.json) contains 52K instruction-following data we used for fine-tuning the Alpaca model.
 This JSON file is a list of dictionaries, each dictionary contains the following fields:
 
 - `instruction`: `str`, describes the task the model should perform. Each of the 52K instructions is unique.
@@ -103,7 +103,7 @@ We plot the below figure (in the style of Figure 2 in the [self-instruct paper](
 The inner circle of the plot represents the root verb of the instructions, and the outer circle represents the direct objects.
 
 [//]: # (![parse_analysis]&#40;assert/parse_analysis.png | width=100&#41;)
-[<img src="assets/parse_analysis.png" width="750" />](./assets/parse_analysis.png)
+[<img src="assets/parse_analysis.png" width="750" />](assets/parse_analysis.png)
 
 ## Fine-tuning
 

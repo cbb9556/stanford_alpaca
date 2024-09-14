@@ -26,7 +26,7 @@ import fire
 
 def encode_prompt(prompt_instructions):
     """Encode multiple prompt instructions into a single string."""
-    prompt = open("./prompt.txt").read() + "\n"
+    prompt = open("prompt.txt").read() + "\n"
 
     for idx, task_dict in enumerate(prompt_instructions):
         (instruction, input, output) = task_dict["instruction"], task_dict["input"], task_dict["output"]
@@ -210,6 +210,8 @@ def generate_instruction_following_data(
 
 
 def main(task, **kwargs):
+    # globals()函数 是这个文件的全局命名空间，能够知道上面所有函数的地址，使用dict形式，找到task的函数（task通过传参进入）
+    # 能够根据，cli命令行传入参数，动态执行本文件中的函数
     globals()[task](**kwargs)
 
 
